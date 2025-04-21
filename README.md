@@ -22,14 +22,18 @@ Este projeto tem como objetivo interagir com todos os periféricos presentes na 
 
 7. O botão do joystick ativa o modo bootsel em nossa placa BitDogLab.
 
-8. O botão A incrementa os números que são exibidos na matriz de leds. A medida que o número exibido é mudado, o buzzer toca uma nota musical correspondente. Além disso, o botão A habilita/desabilita os leds VERMELHO e AZUL ao ser clicado.
+8. O botão A incrementa as cifras musicais de notas que são exibidas na matriz de leds. A medida que a cifra musical de uma nota é exibida na matriz, o buzzer toca a nota musical correspondente.
 
 9. O botão B serve para resetar as variáveis do sistema, parar o buzzer e limpar a matriz de leds.
 
 ## Vídeo de Demonstração
 ```bash
-   Link: 
+   Link: https://www.youtube.com/shorts/bPwh5C0IFpk
 ```
+
+Além disso, este é o [relatório do projeto](https://docs.google.com/document/d/10G3nHlnybjxXwpgcsgNz_KdrcaquWpVopvNXDRDtngk/edit?usp=sharing) com mais detalhes da implementação.
+
+[das]()
 
 ## Licença
 Este projeto é licenciado sob a licença MIT – consulte o arquivo LICENSE para mais detalhes.

@@ -126,10 +126,6 @@ int main() {
     sprintf(str_x, "%d", adc_value_x);
     sprintf(str_y, "%d", adc_value_y);
 
-    printf("Valor do ADC X: %d\n", adc_value_x);
-    printf("Valor do ADC Y: %d\n", adc_value_y);
-    printf("------------------------------\n");
-
     // Calcula o valor do incrementos x e y para a posição do retângulo
     int increment_x = adc_value_x - (JOYSTICK_MIDDLE_X);
     increment_x = increment_x / (HEIGHT / 2.0);
