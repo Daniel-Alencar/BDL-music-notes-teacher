@@ -55,12 +55,12 @@ void gpio_irq_handler(uint gpio, uint32_t events) {
       set_blue(false);
       set_red(false);
       
-      draw(numbers[drawning_index]);
+      draw(movie_music_notes[drawning_index]);
       drawning_index++;
-      if(drawning_index >= 10) {
+      if(drawning_index >= 12) {
         drawning_index = 0;
       }
-      start_buzzer(music_notes[music_notes_index]);
+      start_buzzers(music_notes[music_notes_index]);
       music_notes_index++;
       if(music_notes_index >= 12) {
         music_notes_index = 0;
@@ -70,7 +70,7 @@ void gpio_irq_handler(uint gpio, uint32_t events) {
     } else if (gpio == BUTTON_B) {
       printf("Botão B pressionado\n");
       
-      stop_buzzer();
+      stop_buzzers();
       draw(clean_frame);
       music_notes_index = 0;
       drawning_index = 0;
@@ -102,7 +102,7 @@ int main() {
   setup_led_RGB();
   setup_display_oled();
   setup_led_matrix();
-  setup_buzzer(400);
+  setup_buzzers(music_notes[0]);
 
   setup_pwm(PWM_BLUE_LED, WRAP, F_CLOCK, D_I, D_F);
   setup_pwm(PWM_RED_LED, WRAP, F_CLOCK, D_I, D_F);

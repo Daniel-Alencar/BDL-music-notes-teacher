@@ -4,7 +4,8 @@
 #include "hardware/clocks.h"
 
 //Definições buzzer
-#define BUZZER_PIN 10
+#define BUZZER_PIN_A 21
+#define BUZZER_PIN_B 10
 
 
 // Frequências das 12 notas da escala cromática na oitava 4
@@ -24,7 +25,7 @@ double music_notes[12] = {
 };
 
 // Função PWM para buzzer
-void setup_buzzer(uint frequency) {
+void setup_buzzer(uint BUZZER_PIN, uint frequency) {
     // Configura o pino do buzzer para PWM
     gpio_set_function(BUZZER_PIN, GPIO_FUNC_PWM);
     
@@ -49,8 +50,13 @@ void setup_buzzer(uint frequency) {
     pwm_set_enabled(slice_num, false);
 }
 
+void setup_buzzers(uint frequency) {
+    setup_buzzer(BUZZER_PIN_A, frequency);
+    setup_buzzer(BUZZER_PIN_B, frequency);
+}
+
 //Função para ligar buzzer
-void start_buzzer(uint frequency) {
+void start_buzzer(uint BUZZER_PIN, uint frequency) {
     gpio_set_function(BUZZER_PIN, GPIO_FUNC_PWM); // Configura o pino como PWM
     uint slice_num = pwm_gpio_to_slice_num(BUZZER_PIN);
 
@@ -65,11 +71,20 @@ void start_buzzer(uint frequency) {
     pwm_set_enabled(slice_num, true);      // Habilita o PWM
 }
 
+void start_buzzers(uint frequency) {
+    start_buzzer(BUZZER_PIN_A, frequency);
+    start_buzzer(BUZZER_PIN_B, frequency);
+}
 
 //Função para desligar buzzer
-void stop_buzzer() {
+void stop_buzzer(uint BUZZER_PIN) {
     uint slice_num = pwm_gpio_to_slice_num(BUZZER_PIN);
     // Define o duty cycle como 0 (sem som)
     pwm_set_gpio_level(BUZZER_PIN, 0);
     pwm_set_enabled(slice_num, false);   
+}
+
+void stop_buzzers() {
+    stop_buzzer(BUZZER_PIN_A);
+    stop_buzzer(BUZZER_PIN_B);
 }

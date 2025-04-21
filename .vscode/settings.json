@@ -43,6 +43,7 @@
         "timer.h": "c",
         "buttons.h": "c",
         "pwm.h": "c",
-        "clean.h": "c"
+        "clean.h": "c",
+        "music_notes.h": "c"
     }
 }
