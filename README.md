@@ -33,8 +33,6 @@ Este projeto tem como objetivo interagir com todos os periféricos presentes na 
 
 Além disso, este é o [relatório do projeto](https://docs.google.com/document/d/10G3nHlnybjxXwpgcsgNz_KdrcaquWpVopvNXDRDtngk/edit?usp=sharing) com mais detalhes da implementação.
 
-[das]()
-
 ## Licença
 Este projeto é licenciado sob a licença MIT – consulte o arquivo LICENSE para mais detalhes.
 
