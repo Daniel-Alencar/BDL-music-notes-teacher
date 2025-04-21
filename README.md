@@ -1,4 +1,4 @@
-# Dispositivo display ssd1306
+# Music Notes Teacher (MNT)
 
 ## Descrição
 Este projeto tem como objetivo interagir com todos os periféricos presentes na BitDogLab.
