@@ -28,7 +28,7 @@ Este projeto tem como objetivo interagir com todos os periféricos presentes na 
 
 ## Vídeo de Demonstração
 ```bash
-   Link: https://www.youtube.com/shorts/bPwh5C0IFpk
+Link: https://www.youtube.com/shorts/bPwh5C0IFpk
 ```
 
 Além disso, este é o [relatório do projeto](https://docs.google.com/document/d/10G3nHlnybjxXwpgcsgNz_KdrcaquWpVopvNXDRDtngk/edit?usp=sharing) com mais detalhes da implementação.
